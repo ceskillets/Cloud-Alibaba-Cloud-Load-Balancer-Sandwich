@@ -1,9 +1,9 @@
 variable "access_key" {
-    default = "LTAI52jBFX9xYUz2"
+    default = ""
 }
 
 variable "secret_key" {
-    default = "9mZWVGfS3IacEPXw8FUVbV2UvaatCz"
+    default = ""
 }
 
 variable "fw-region" {
