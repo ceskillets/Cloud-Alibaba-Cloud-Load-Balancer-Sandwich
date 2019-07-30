@@ -19,7 +19,7 @@ extends:
 # group multiple skillets of the same type (pan-os skillets labeled as version: 9.0 for example)
 labels:
   collection:
-    - YKB Skillets
+    - Cloud-Alibaba-Cloud-Load-Balancer-Sandwich
   terraform_provider: alicloud
 
 
