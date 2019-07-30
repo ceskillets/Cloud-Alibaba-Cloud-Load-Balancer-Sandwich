@@ -1,0 +1,42 @@
+
+# this is the name of this skillet, should be unique within a given repository
+name: alicloud_lb_sandwich_add_lb_addr
+
+# label should be a human readable label that conveys what this skillet will do
+label: Alicloud LB Sandwich Step 3 Add LB Address
+
+# description is a longer more informative version of a label
+description: This skillet will update the IP address of the newly created internal LB to the address object on VM-Series that is used for inbound DNAT. Password is PaloAlt0123!
+
+# type instructs Panhandler how to consume this skillet
+type: python3
+
+# extends allows you to include other skillets along with this one
+extends:
+
+# labels allow extensible configuration options per skillet type. For example, lables can be used to
+# group multiple skillets of the same type (pan-os skillets labeled as version: 9.0 for example)
+labels:
+  collection:
+    - YKB Skillets
+
+
+
+# Variables will be presented to the user via the Panhandler GUI. These values will then be passed to
+# the terraform binary as '--var' options, thus overriding any tfvars entries.
+# Variable names MUST match the names of the defined terraform variables
+variables:
+  - name: password
+    description: Password for "admin" user on VM-Series
+    default:
+    type_hint: password
+
+    
+# Snippets is an ordered list of configuration xml fragments that will be pushed to the PAN-OS NGFW. The xpath
+# determines where in the configuration hierarchy the xml fragment will be set. 'file' indicates the name of the file
+# to load and parse. Jinja2 style variables will be variable interpolated using the values of the 'variables' defined
+# in the 'variables' section.
+snippets:
+  - name: script
+    file: address.py
+    input_type: cli
