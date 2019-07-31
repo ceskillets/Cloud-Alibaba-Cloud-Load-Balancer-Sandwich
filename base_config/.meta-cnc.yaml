@@ -19,7 +19,7 @@ extends:
 labels:
   collection:
     - Cloud-Alibaba-Cloud-Load-Balancer-Sandwich
-
+    - Alibaba-Cloud
 
 
 # Variables will be presented to the user via the Panhandler GUI. These values will then be passed to

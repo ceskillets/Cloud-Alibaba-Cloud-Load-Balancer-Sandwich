@@ -20,6 +20,7 @@ extends:
 labels:
   collection:
     - Cloud-Alibaba-Cloud-Load-Balancer-Sandwich
+    - Alibaba-Cloud
   terraform_provider: alicloud
 
 
