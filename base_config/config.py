@@ -4,17 +4,18 @@ import argparse
 import urllib3
 import subprocess
 import sys
+from python_terraform import Terraform
 
-def install(package):
-    subprocess.call([sys.executable, "-m", "pip", "install", package])
-
-install('python_terraform')
-
-try:
-    from python_terraform import Terraform
-except ImportError:
-    install('python_terraform')
-    from python_terraform import Terraform
+#def install(package):
+#    subprocess.call([sys.executable, "-m", "pip", "install", package])
+#
+#install('python_terraform')
+#
+#try:
+#    from python_terraform import Terraform
+#except ImportError:
+#    install('python_terraform')
+#    from python_terraform import Terraform
 
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
