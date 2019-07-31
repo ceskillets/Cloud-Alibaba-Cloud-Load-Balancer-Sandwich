@@ -3,7 +3,7 @@
 Prequisites:
 - Create a custom image to launch the PA VM
   - https://docs.paloaltonetworks.com/vm-series/9-0/vm-series-deployment/set-up-the-vm-series-firewall-on-alibaba-cloud/prepare-to-deploy-the-vm-series-firewall-on-alibaba-cloud.html#idd95814fd-ab5f-4a67-a060-e9858975316c
-  - Your custom image name must contain the string: "vm-series-9.0.1"  
+  - Your custom image name must start with "vm-series-9.0.1"  
 
 Description:
 - This skillet deploys a LB Sandwich on Alicloud, deploying two VM-Series, two web servers, one external LB and one internal LB.
