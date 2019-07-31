@@ -1,2 +1,3 @@
 python-terraform
 requests
+urllib3
