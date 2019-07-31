@@ -5,6 +5,6 @@ variable "secret_key" {
     default = ""
 }
 
-variable "fw-region" {
+variable "region" {
     default = "ap-southeast-1"
 }
